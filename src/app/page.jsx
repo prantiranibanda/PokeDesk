@@ -27,7 +27,7 @@ export default async function Home() {
       <div className="grid grid-cols-3 gap-1 px-20 py-7">
 
         {pokemon.map((value, index)=>{
-          return <div className="flex items-center shadow-md shadow-gray-200 first-letter:text-center bg-white m-2 p-10 rounded-lg font-sans font-medium text-gray-700 text-lg ">
+          return <div key={value.name} className="flex items-center shadow-md shadow-gray-200 first-letter:text-center bg-white m-2 p-10 rounded-lg font-sans font-medium text-gray-700 text-lg ">
             <Link href={`/pokemon/${index+1}`}>
             <Image
               src={value.imageUrl}
